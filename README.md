@@ -100,7 +100,7 @@ The plugin currently contains one skill and no scripts, bundled MCP server, or e
 
 ## Credits and license
 
-The Codex adaptation is created and maintained by **Fabbio Boli**. Its starting point was Anthropic's **Claude Code Setup** skill by Isabella He. The Codex-specific instructions, packaging, and documentation were adapted for this project. This project is not affiliated with or endorsed by Anthropic or OpenAI.
+The Codex adaptation is created and maintained by **Fabbio Boli**. The Codex-specific instructions, packaging, and documentation were adapted for this project. This project is not affiliated with or endorsed by Anthropic or OpenAI.
 
 Distributed under the Apache License 2.0. See [`LICENSE`](LICENSE) for the license text and [`NOTICE`](NOTICE) for attribution details.
 
