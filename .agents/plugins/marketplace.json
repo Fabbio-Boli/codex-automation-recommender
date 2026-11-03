@@ -1,0 +1,23 @@
+{
+  "name": "codex-automation-recommender-marketplace",
+  "interface": {
+    "displayName": "Codex Automation Recommender"
+  },
+  "plugins": [
+    {
+      "name": "codex-automation-recommender",
+      "source": {
+        "source": "local",
+        "path": "./plugins/codex-automation-recommender"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity",
+      "interface": {
+        "displayName": "Codex Automation Recommender"
+      }
+    }
+  ]
+}

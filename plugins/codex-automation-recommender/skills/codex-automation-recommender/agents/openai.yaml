@@ -1,0 +1,4 @@
+interface:
+  display_name: "Codex Automation Recommender"
+  short_description: "Evidence-based Codex setup advice for a repository"
+  default_prompt: "Use $codex-automation-recommender to review this repository. Recommend evidence-based Codex setup improvements, explain trade-offs and requirements, and keep the review read-only."

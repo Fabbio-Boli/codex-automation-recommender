@@ -1,0 +1,28 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "codex-automation-recommender",
+  "version": "1.0.0",
+  "description": "An independent, read-only OpenAI Codex plugin that reviews a repository and recommends evidence-based improvements to instructions, skills, agents, hooks, MCP servers, plugins, and built-in features.",
+  "author": {
+    "name": "Fabbio Boli",
+    "url": "https://github.com/Fabbio-Boli"
+  },
+  "homepage": "https://github.com/Fabbio-Boli/codex-automation-recommender",
+  "repository": "https://github.com/Fabbio-Boli/codex-automation-recommender",
+  "license": "Apache-2.0",
+  "keywords": ["codex", "repository-review", "automation", "skills"],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Codex Automation Recommender",
+        "shortDescription": "Evidence-based Codex setup advice for a repository",
+        "longDescription": "Reviews a repository read-only and recommends relevant Codex instructions, skills, agents, hooks, MCP servers, plugins, or built-in features, with evidence, trade-offs, and requirements.",
+        "developerName": "Fabbio Boli",
+        "category": "Productivity",
+        "capabilities": ["Read"],
+        "websiteURL": "https://github.com/Fabbio-Boli/codex-automation-recommender",
+        "defaultPrompt": "Use $codex-automation-recommender to review this repository. Recommend evidence-based Codex setup improvements, explain trade-offs and requirements, and keep the review read-only."
+      }
+    }
+  }
+}
