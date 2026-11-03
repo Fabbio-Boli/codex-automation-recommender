@@ -1,6 +1,6 @@
 # Self-review: Codex Automation Recommender
 
-This review applies the workflow described by the packaged skill to this repository itself. It is a static review of the package files; it does not claim that installation or invocation was exercised in a live Codex client.
+I reviewed this package with its own skill and then validated the published GitHub marketplace installation in a fresh Codex conversation. This document records what I observed and which checks remain open.
 
 ## What this project is
 
@@ -27,14 +27,24 @@ It does not contain a scanner program, web service, model/API integration, MCP s
 5. **Publisher identity and product status were ambiguous.** The package now identifies Fabbio Boli as developer and calls itself an independent third-party Codex plugin. It does not claim to be made or endorsed by OpenAI.
 6. **Package metadata was sparse.** The portable manifest now contains OpenAI-specific display metadata and a read-only capability declaration, in addition to portable identity and license fields.
 
-## Still to do before calling it fully validated
+## Live validation performed
 
-- Install from the published GitHub repository in a supported Codex desktop version and confirm the marketplace catalog resolves the plugin folder.
-- Start a fresh Codex conversation, explicitly invoke the skill, and inspect whether the host presents and follows the skill instructions as intended.
-- Repeat the review on a small sample repository and a repository with existing Codex setup. Compare output against the skill's evidence, safety, and report requirements.
-- If desired, submit the package separately for the universal public Plugins Directory. A public GitHub repository or Git marketplace does not by itself publish it there.
+On 2026-11-02, I completed these checks:
 
-These checks require an available Codex client and a public remote repository. They have not been represented as complete by this static review.
+- **GitHub catalog:** Added `Fabbio-Boli/codex-automation-recommender` with sparse paths `.agents/plugins` and `plugins/codex-automation-recommender`. Codex resolved the remote marketplace and its plugin folder.
+- **Installation:** Installed `codex-automation-recommender@codex-automation-recommender-marketplace`; Codex reported version `1.0.0` installed and enabled.
+- **Fresh conversation:** Started a new Codex conversation and explicitly invoked `$codex-automation-recommender`. The skill activated, followed its report format, and cited repository paths including the skill, plugin manifest, and marketplace catalog.
+- **Read-only behavior:** The review did not run project scripts or change repository files. `git status` remained clean after the review.
+- **Package consistency:** The GitHub marketplace checkout and installed plugin copies of `plugin.json`, `SKILL.md`, and `agents/openai.yaml` matched after normalizing line endings. The marketplace catalog resolved the expected `./plugins/codex-automation-recommender` directory.
+
+The live review also suggested concise maintainer guidance in a root `AGENTS.md`. This is optional; the plugin works without that file.
+
+## Still to do
+
+- Review at least one separate sample repository, ideally one with no Codex setup and one that already has Codex instructions or skills. The live review above analyzed this plugin repository itself.
+- If desired, submit the package separately for the universal public Plugins Directory. A public GitHub repository or Git marketplace does not publish it there automatically.
+
+The checks above validate the GitHub marketplace catalog and a fresh-session invocation in the Codex environment used for this review. They do not guarantee identical behavior in every Codex version or surface.
 
 ## Current requirements
 
